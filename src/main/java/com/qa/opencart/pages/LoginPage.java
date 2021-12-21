@@ -24,7 +24,7 @@ public class LoginPage {
 	private By emailId = By.xpath("//input[@name = 'email']");
 	private By password = By.xpath("//input[@name = 'password']");
 	private By loginbtn = By.xpath("//input[@value= 'Login']");
-	private By forgetlink = By.xpath("//div[@class='well']//a[text()='Forgotten Password']");
+	private By forgetlink = By.xpath("//input[@name='password']//following-sibling::a");
 	private By errorMsg = By.xpath("//*[@id='account-login']/div[1]/i");
 	private By registerlink = By.xpath("//*[@id='column-right']/div/a[2]");
 	

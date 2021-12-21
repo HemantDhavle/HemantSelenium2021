@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Constants 
 {
-	public static final String LOGIN_PAGE_TITLE = "Account Logins";
+	public static final String LOGIN_PAGE_TITLE = "My Account";
 	public static final String ACCOUNT_PAGE_TITLE = "Your Store";
 	public static final Object IMAC_IMAGE_COUNT = 3;
 	public static final Object MACBOOKPRO_IMAGE_COUNT = 4;

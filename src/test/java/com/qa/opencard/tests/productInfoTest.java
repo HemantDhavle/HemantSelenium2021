@@ -42,7 +42,7 @@ public class productInfoTest extends baseTest {
 		//Hard Assersion
 		//Assert.assertEquals(actMap.get("Brand"), "Apple");
 		//Soft Assersion
-		softAssert.assertEquals(actMap.get("Brand"), "Apple1");
+		softAssert.assertEquals(actMap.get("Brand"), "Apple");
 		softAssert.assertEquals(actMap.get("Availability"), "Out Of Stock");
 		softAssert.assertEquals(actMap.get("name"), "MacBook Pro");
 		softAssert.assertAll();

@@ -16,7 +16,7 @@ public class AccountPage
 	public AccountPage(WebDriver driver)
 	{
 		this.driver= driver;
-		
+		el = new ElementUtils(driver);
 	}
 	
 	private By pageTitle = By.cssSelector("div#logo a");

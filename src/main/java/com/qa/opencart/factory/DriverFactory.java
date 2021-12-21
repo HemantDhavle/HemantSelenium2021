@@ -26,6 +26,7 @@ public class DriverFactory
 	public static ThreadLocal<WebDriver> tlDriver= new ThreadLocal<WebDriver>();
 	//1.
 	public static String highlight;
+	
 	public WebDriver init_driver(Properties prop )
 	{
 		String browserName = prop.getProperty("browser");
@@ -81,7 +82,7 @@ public class DriverFactory
 		String envName = System.getProperty("env");
 		try
 		{
-			if(envName ==null)
+			if(envName == null)
 		{
 			System.out.println("We are running on production environment");
 			fs = new FileInputStream("./src/test/resources/config/config.properties");

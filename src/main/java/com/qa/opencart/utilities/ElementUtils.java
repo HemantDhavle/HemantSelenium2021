@@ -10,8 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.qa.opencart.factory.DriverFactory;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class ElementUtils {
 
@@ -65,7 +65,8 @@ public class ElementUtils {
 	public WebElement getElement(By Locator)
 	{
 		WebElement element = driver.findElement(Locator);
-		if(Boolean.parseBoolean(DriverFactory.highlight))
+		
+				if(Boolean.parseBoolean(DriverFactory.highlight))
 		{
 			
 			jsUtil.flash(element);
@@ -201,6 +202,10 @@ public class ElementUtils {
 		doWaitAlert(time).sendKeys(value);
 	}
 	
+	public boolean isDisplayed(By locator)
+	{
+		return getElement(locator).isDisplayed();
+	}
 	
 
 }

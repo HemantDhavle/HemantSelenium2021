@@ -27,6 +27,11 @@ public class LoginPage {
 	private By forgetlink = By.xpath("//input[@name='password']//following-sibling::a");
 	private By errorMsg = By.xpath("//*[@id='account-login']/div[1]/i");
 	private By registerlink = By.xpath("//*[@id='column-right']/div/a[2]");
+	private By AddressBookLink = By.xpath("//a[text()='Address Book']");
+	private By wishListLink = By.xpath("//a[text()='Address Book']//following-sibling::a[text()='Wish List']");
+	private By newLetterLink = By.xpath("//div[@class='list-group']/a[text()='Newsletter']");
+	private By rewardsPointlink = By.xpath("//a[text()='Reward Points']");
+	private By affiliateLink = By.xpath("//a[contains(text(),'affiliate')]");
 	
 	//4.Page Action
 	public String getLoginPageURL()
@@ -75,5 +80,34 @@ public class LoginPage {
 		eleUtil.doClick(registerlink);
 		return new RegistrationPage(driver);
 	}
+
+	public AddressBookPage goToAddressBookPage()
+	{
+		eleUtil.doClick(AddressBookLink);
+		return new AddressBookPage(driver);
+	}
 	
+	public WishListPage goWishListPage()
+	{
+		eleUtil.doClick(wishListLink);
+		return new WishListPage(driver);
+	}
+	
+	public NewsLetterPage goNewsLetterPage()
+	{
+		eleUtil.doClick(newLetterLink);
+		return new NewsLetterPage(driver);
+	}
+	
+	public RewardsPage goRewardsPage()
+	{
+		eleUtil.doClick(rewardsPointlink);
+		return new RewardsPage(driver);
+	}
+	
+	public AffiliatePage goAffiliatePage()
+	{
+		eleUtil.doClick(affiliateLink);
+		return new AffiliatePage(driver);
+	}
 }
